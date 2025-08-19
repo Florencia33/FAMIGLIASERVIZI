@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: FiraSansCondensed, sans-serif;
+  background-color: #f8f9fa;
+  color: rgb(44, 44, 70);
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+  color: #863902;
+}
+
+header {
+  background-color: #863902;
+  color: rgb(44, 44, 70);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: rgb(44, 44, 70);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ffc107;
+}
+
+main {
+  padding: 20px;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button,
+form input[type="submit"] {
+  background-color: #863902;
+  color: rgb(44, 44, 70);
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+  background-color: #a64d0d;
+}
+
+footer {
+  height: 15vh;
+  width: 100%;
+  background-color: #863902;
+  font-family: FiraSansCondensed, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: rgb(44, 44, 70);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffc107;
+}
+
+.logros {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.logro {
+  text-align: center;
+}
+
+.logro img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+}
+
+.logro p {
+  font-weight: bold;
+}
+/* Título de sección */
+.titulo-seccion {
+  font-family: FiraSansCondensed, sans-serif;
+  color: rgb(134, 57, 2); /* marrón corporativo */
+  font-weight: bold;
+}
+
+/* Tarjetas de servicios */
+.servicio-card {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease-in-out;
+}
+
+.servicio-card:hover {
+  transform: scale(1.05);
+}
+
+.texto-servicio {
+  color: rgb(134, 57, 2); /* mismo marrón del footer */
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: FiraSansCondensed, sans-serif;
+}
+
+
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+  form input,
+  form select,
+  form textarea {
+    font-size: 0.9rem;
+  }
+  footer {
+    height: auto;
+    padding: 20px 10px;
+  }
+}
+
+.brand-link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #000 !important;
+}
+
+.brand-link:hover {
+  color: #c0392b !important;
+}
+
+.testimonios {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonios h2 {
+  color: #863902;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.testimonios-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonio {
+  background: #fff;
+  border: 2px solid #863902;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  max-width: 90%;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonio:hover {
+  transform: translateY(-5px);
+}
+
+.testimonio img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #863902;
+}
+
+.testimonio p {
+  font-size: 0.95rem;
+  color: rgb(44, 44, 70);
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.testimonio h4 {
+  font-size: 1rem;
+  color: #863902;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .testimonios-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
