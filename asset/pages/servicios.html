@@ -1,84 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Famiglia Servizi - Inicio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Servicios | Famiglia Servizi</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style/style.css">
-<body>
-<header class="d-flex align-items-center justify-content-between p-3 bg-white shadow-sm">
-  <div class="d-flex align-items-center">
-    <img src="../img/LogFamigliaServizi.png" alt="Logo Famiglia Servizi" class="me-2" style="height:50px;">
-    <h1 class="m-0">
-      <a href="../index.html" class="brand-link">FAMIGLIA SERVIZI</a>
+</head>
+<body class="page page-servicios">
+<header class="custom-header navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid align-items-center">
+    <a href="../../index.html" class="navbar-brand d-flex align-items-center">
+      <img src="../img/LogFamigliaServizi.png" alt="Famiglia Servizi" class="logo-wp" height="50">
+    </a>
+    <h1 class="brand-title m-0 flex-grow-1 text-center">
+      <a href="../../index.html" class="brand-link text-decoration-none">FAMIGLIA SERVIZI</a>
     </h1>
+    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav id="navbarNav" class="collapse navbar-collapse justify-content-center">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link" href="quienes-somos.html">Quiénes Somos</a></li>
+        <li class="nav-item"><a class="nav-link" href="donde-estamos.html">Dónde Estamos</a></li>
+        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="trabaja-con-nosotros.html">Trabaja con Nosotros</a></li>
+      </ul>
+    </nav>
   </div>
-  <nav>
-    <ul class="d-flex list-unstyled m-0 gap-3">
-      <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-      <li><a href="donde-estamos.html">Dónde Estamos</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="trabaja-con-nosotros.html">Trabaja con Nosotros</a></li>
-    </ul>
-  </nav>
 </header>
-<main> <h1 class="mb-4">Servicios</h1>
-
-    <h3>Servicios Atmosféricos</h3>
-    <img src="../img/CAMION.png" alt="Logo CAMION" title="Servicios atmosfericos">
-    <p> <h3>Nos destaca la rapidez y la eficiencia. ¡En sólo 30 minutos! </h3><p>
-
+  <a href="https://wa.me/5493492342368" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <img src="../img/logo-whatsapp.png" alt="WhatsApp">
+  </a>
+ <main class="main container py-4">
+    <section class="text-center mb-5">
+      <h1 class="animate">Nuestros Servicios</h1>
+      <p>Conocé lo que ofrecemos para tu hogar, comercio o empresa.</p>  
+       <p class="text-center">
+      ¡Gracias por visitarnos! Ofrecemos soluciones integrales en mantenimiento, plomería, electricidad y más.
     </p>
-Nuestro servicio atmosférico se destaca por utilizar camiones totalmente equipados con bombas de succión para extraer líquidos y residuos de pozos, tanques y sistemas de tratamiento de aguas residuales. 
-<h4>¿A quién van dirigido este servicio?</h4>
-◉Empresas:
-Industrias, comercios, hoteles, restaurantes, y otros establecimientos que requieren sistemas de saneamiento eficientes. 
-◉Viviendas:
-Casas particulares con pozos ciegos o sépticos, que necesitan mantenimiento periódico. 
-◉Comunidades:
-Conjuntos residenciales, barrios cerrados y otras agrupaciones que comparten sistemas de saneamiento. 
-◉Eventos:
-Eventos al aire libre, festivales y ferias que requieren soluciones temporales de saneamiento. 
+    </section>
+    <section class="row g-4 justify-content-center">
+      <div class="col-12 col-md-4">
+        <div class="servicio-card text-center p-3 h-100">
+          <img src="../img/CAMION.png" alt="Servicio de atmosférico" class="img-fluid rounded mb-3" style="max-height:180px; object-fit:cover;">
+          <h3>Atmosférico</h3>
+          <p></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="servicio-card text-center p-3 h-100">
+          <img src="../img/plomeria.png" alt="Servicio de mantenimiento interno" class="img-fluid rounded mb-3" style="max-height:180px; object-fit:cover;">
+          <h3>Mantenimientos internos</h3>
+          <p>Soluciones reales para hogares y empresas.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="servicio-card text-center p-3 h-100">
+          <img src="../img/tapizados.png" alt="Servicio de tapizados" class="img-fluid rounded mb-3" style="max-height:180px; object-fit:cover;">
+          <h3>Tapizados</h3>
+          <p>Restauración y limpieza de muebles y vehículos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<h3> Servicios Tapizados</h3>
-<img src="../img/tapizados.png" alt="Logo tapizados" title="Servicios tapizados">
-<p>
-<h3>Brindamos nuestros servicios a domicilio. ¡Vamos a toda la ciudad!</h3>
-En la limpieza de tapizados nos destacan nuestros excelentes productos de alta calidad y garantia asegurada.
-</p>
-<p>
-  <h4>Realizamos lavado y desinfección de:</h4>
-◉Alfombras
-◉Sillones y sillas
-◉Colchones
-◉Cortinas blackout (sistema roller)
-</p>
-
-<h3>Mantenimientos Internos</h3>
-<img src="../img/plomeria.png" alt="mantenimiento internos" title="Mantenimientos Internos">
-<h3>Soluciones reales a problemas reales</h3>
-<p> Ofrecemos mantenimiento interno de tu hogar que abarca tareas esenciales para asegurar el buen estado y funcionamiento.</p>
-<p> <h4>¿Qué servicio para tu casa necesitas hoy?</h4>
-<h4>Contamos con:</h4>
-◉Plomeria
-◉Gasista
-◉Electricista
-◉Pintura</p>
-<p></p>
-<h1>GARANTIA ASEGURADA EN TODOS NUESTROS SERVICIOS</h1>
-</main>
-  <footer class="bg-light text-center py-3">
-    <div class="d-flex justify-content-center gap-3 mb-2">
-      <a href="https://www.instagram.com/" target="_blank"><img src="../img/logo-instagram.png" width="40" alt="Instagram"></a>
-      <a href="https://www.facebook.com/" target="_blank"><img src="../img/logo-facebook.png" width="40" alt="Facebook"></a>
-      <a href="https://www.youtube.com/" target="_blank"><img src="../img/logo-youtobe.png" width="40" alt="YouTube"></a>
-      <a href="https://api.whatsapp.com/" target="_blank"><img src="../img/logo-whatsapp.png" width="40" alt="WhatsApp"></a>
+  <footer class="footer" role="contentinfo">
+    <div class="inner">
+      <div class="footer__social" aria-label="Redes sociales">
+        <a href="https://www.instagram.com/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="../img/logoinstagram.png" alt="Instagram" width="28" height="28" loading="lazy">
+        </a>
+        <a href="https://www.facebook.com/" class="footer__social-link" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="../img/logo-facebook.png" alt="Facebook" width="28" height="28" loading="lazy">
+        </a>
+        <a href="https://www.youtube.com/" class="footer__social-link" target="_blank" rel="noopener" aria-label="YouTube">
+          <img src="../img/logo-youtube.png" alt="YouTube" width="28" height="28" loading="lazy">
+        </a>
+        <a href="https://wa.me/5493492342368" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="../img/logo-whatsapp.png" alt="WhatsApp" width="28" height="28" loading="lazy">
+        </a>
+      </div>
+      <p class="footer__contact">
+        <strong>Famiglia Servizi</strong> | Administración: Lugones 967, Rafaela | (03492) 15 342368 |
+        <a href="mailto:administracion@famigliaservizi.com">administracion@famigliaservizi.com</a>
+      </p>
+      <p class="footer__copy">© 2025 Famiglia Servizi</p>
     </div>
-    <p>Famiglia Servizi | Administración: Lugones 967, Rafaela | (03492) 15 342368 | 
-      <a href="mailto:administracion@famigliaservizi.com">administracion@famigliaservizi.com</a></p>
-    <p>© 2025 Famiglia Servizi</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

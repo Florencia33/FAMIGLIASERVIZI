@@ -1,0 +1,69 @@
+@use "variables" as *;
+@use "mixins" as mx;
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: $sp-8;
+  background: #0f172a;
+  color: #e2e8f0;
+  text-align: center;
+  padding: $sp-6 0;
+
+  .inner {
+    @include mx.container();         // reemplaza al @extend .container
+  }
+
+  .footer__social {
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .75rem;
+  }
+
+  .footer__social-link {
+    display: inline-grid;
+    place-items: center;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.06);
+    transition: transform .12s ease, background .12s ease;
+
+    &:hover { transform: translateY(-1px); background: rgba(255,255,255,.12); }
+    img { display: block; }
+  }
+
+  .footer__contact {
+    margin: 0 0 .25rem;
+
+    a {
+      color: #e2e8f0;
+      text-decoration: underline;
+      transition: color .2s ease;
+
+      &:hover { color: $brand; }
+    }
+  }
+
+  .footer__copy { margin: 0; opacity: .8; font-size: .95rem; }
+}
+
+/* ===== BOTÓN WHATSAPP FLOTANTE ===== */
+@keyframes pulse-lite { 0%{transform:scale(1)} 50%{transform:scale(1.08)} 100%{transform:scale(1)} }
+
+.whatsapp-float {
+  position: fixed;
+  inset-block-end: 20px;
+  inset-inline-end: 20px;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: $brand;
+  display: grid; place-items: center;
+  z-index: $z-float;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  transition: transform .2s ease;
+
+  img { width: 34px; height: 34px; }
+
+  &:hover { animation: pulse-lite .8s ease-in-out; }
+}

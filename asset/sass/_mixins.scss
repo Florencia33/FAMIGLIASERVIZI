@@ -1,0 +1,41 @@
+@use "variables" as *;
+
+
+@mixin up($w) {
+  @media (min-width: $w) { @content; }
+}
+
+@mixin container($max: 1200px, $pad: 1rem) {
+  inline-size: min(100% - $pad * 2, $max);
+  margin-inline: auto;
+}
+
+@mixin auto-grid($min: 220px, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+  gap: $gap;
+}
+
+
+@mixin truncate($lines: 1) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+@mixin btn-base {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: .65rem 1rem; border-radius: $radius; border: 1px solid transparent;
+  font-weight: 700; text-decoration: none; cursor: pointer; gap: .5rem;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease, color .12s ease;
+}
+
+@mixin card {
+  background: $surface; border: 1px solid $line; border-radius: $radius; box-shadow: $shadow;
+}
+@mixin offset-header($offset: 70px) {
+  margin-top: $offset;
+  padding-top: 1rem;
+}

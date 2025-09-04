@@ -1,0 +1,60 @@
+@use "sass:color";
+@use "variables" as *;
+@use "mixins" as mx;
+
+.page-trabaja {
+  overflow-x: clip;
+
+  .hero-title {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    background: #232c28;
+    color: #fff;
+    padding: .6rem 1.2rem;
+    border-radius: $radius;
+    display: inline-block;
+  }
+
+  .titulo-seccion {
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
+    color: #863902;
+    margin: $sp-4 0 $sp-3;
+  }
+
+  .img-form {
+    max-width: 300px;
+    margin: 0 auto $sp-5;
+    img { width: 100%; height: auto; display: block; }
+  }
+
+  .formulario {
+    display: grid;
+    gap: $sp-4;
+    max-width: 640px;
+    margin: 0 auto $sp-8;
+
+    label { font-weight: 700; }
+
+    input, textarea {
+      width: 100%;
+      padding: .75rem;
+      border-radius: $radius;
+      border: 1px solid $line;
+      background: #fff;
+    }
+
+    button {
+      @include mx.btn-base;
+      background: $brand;
+      color: #fff;
+      &:hover { background: color.adjust($brand, $lightness: -6%); }
+    }
+  }
+
+  @media (max-width: $bp-sm) {
+    .img-form { max-width: 220px; }
+  }
+}

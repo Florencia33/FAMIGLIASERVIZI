@@ -1,0 +1,31 @@
+@use "variables" as *;
+@use "mixins" as mx;
+
+.custom-header {
+  position: fixed; inset-block-start: 0; inset-inline: 0;
+  z-index: $z-header;
+  background: #863902;   
+  border-bottom: 1px solid $line;
+
+  .inner {
+    @include mx.container();
+    display: flex; align-items: center; justify-content: space-between;
+    padding-block: $sp-3;
+    gap: $sp-4;
+  }
+
+  .logo { height: 50px; inline-size: auto; display: block; }
+
+  nav {
+    ul { display: flex; align-items: center; gap: $sp-4; list-style: none; margin: 0; padding: 0; }
+    a  { color: $ink; font-weight: 700; }
+    a:hover { color: #ffc107; }
+  }
+
+
+  .toggle { display: none; }
+  @media (max-width: $bp-md) {
+    .inner { flex-wrap: wrap; }
+    nav ul { flex-wrap: wrap; justify-content: center; }
+  }
+}

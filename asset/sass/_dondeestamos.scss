@@ -1,0 +1,69 @@
+@use "variables" as *;
+@use "mixins" as mx;
+
+.page-donde {
+  .main {
+    .titulo-seccion { margin-bottom: $sp-2; }
+    .lead { color: $muted; max-width: 72ch; margin-inline: auto; }
+
+    h1.text-center {
+      font-family: "Fira Sans Condensed", sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      background: #232c28;
+      color: #fff;
+      padding: .6rem 1.2rem;
+      border-radius: $radius;
+      display: inline-block;
+      margin: $sp-3 0 $sp-2;
+    }
+
+    .d-flex iframe {
+      width: min(960px, 100%);
+      aspect-ratio: 16 / 9;
+      height: auto;
+      border: 0;
+      border-radius: $radius;
+      box-shadow: $shadow;
+      background: #fff;
+    }
+  }
+
+  .logros {
+    @include mx.container();
+    display: grid;
+    gap: $sp-4;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    padding-block: $sp-6;
+
+    .logro {
+      grid-column: span 4;
+      @include mx.card;
+      padding: $sp-5;
+      text-align: center;
+      display: grid;
+      gap: $sp-3;
+      place-items: center;
+
+      img {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+        display: block;
+      }
+      h3 {
+        margin: 0;
+        font-weight: 800;
+        color: $ink;
+        font-size: clamp(1.05rem, 1vw + .9rem, 1.25rem);
+      }
+    }
+  }
+
+  @media (max-width: $bp-lg) {
+    .logros .logro { grid-column: span 6; }
+  }
+  @media (max-width: $bp-sm) {
+    .logros .logro { grid-column: span 12; }
+  }
+}

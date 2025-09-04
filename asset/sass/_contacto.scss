@@ -1,0 +1,15 @@
+@use "variables" as *;
+@use "mixins" as mx;
+
+.page-contacto {
+  form { display: grid; gap: $sp-4; max-width: 680px; margin-inline: auto; }
+  label { font-weight: 700; }
+  input, select, textarea {
+    width: 100%; padding: .75rem; border-radius: $radius; border: 1px solid $line; background: #fff;
+  }
+  button {
+    @include mx.btn-base;
+    background: $brand; color: #fff;
+    &:hover { background: $brand-700; transform: translateY(-1px); }
+  }
+}

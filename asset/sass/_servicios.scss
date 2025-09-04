@@ -1,0 +1,72 @@
+@use "variables" as *; 
+@use "mixins" as mx;   
+
+
+.page-servicios {
+  overflow-x: clip;
+}
+
+.main-servicios {
+  padding-top: clamp(88px, 10vh, 112px);
+}
+
+.titulo-seccion {
+  display: inline-block;
+  background: $brand;
+  color: #fff;
+  padding: $sp-3 $sp-5;
+  border-radius: $radius;
+  font-weight: 900;
+  letter-spacing: .3px;
+  box-shadow: $shadow;
+}
+
+.servicio-card {
+  background: #fff;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: $sp-5;
+  text-align: center;
+  display: grid;
+  gap: $sp-3;
+  transition: transform .2s ease, box-shadow .2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.15);
+  }
+
+  img {
+    display: block;
+    margin-inline: auto;
+    inline-size: 100%;
+    max-inline-size: 320px;   
+    block-size: 180px;        
+    object-fit: cover;        
+    border-radius: 12px;
+  }
+
+  h3 {
+    margin: 0;
+    color: $ink;
+    font-weight: 800;
+    font-size: 1.15rem;
+  }
+
+  p {
+    margin: 0;
+    color: $muted;
+    line-height: 1.6;
+    font-size: .975rem;
+  }
+}
+
+
+@media (max-width: $bp-md) {
+  .servicio-card img { block-size: 160px; }
+}
+
+@media (max-width: $bp-sm) {
+  .servicio-card { padding: $sp-4; }
+  .servicio-card img { block-size: 140px; max-inline-size: 260px; }
+}

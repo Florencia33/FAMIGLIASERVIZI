@@ -1,0 +1,110 @@
+@use "variables" as *;
+@use "mixins" as mx;
+
+.page-quienes { overflow-x: clip; }
+.page-quienes .main { padding-top: clamp(84px, 10vh, 104px); }
+
+.page-quienes .intro {
+  @include mx.container();
+  padding-block: $sp-10;
+  text-align: center;
+  background: url("../img/sobrenosotros.jpg") center/cover no-repeat;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.page-quienes .intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 0;
+  border-radius: inherit;
+}
+.page-quienes .intro__content {
+  position: relative;
+  z-index: 1;
+  max-inline-size: 700px;
+  margin-inline: auto;
+  display: grid;
+  gap: $sp-4;
+  padding-inline: $sp-4;
+}
+.page-quienes .intro__title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  margin: 0;
+  color: #fff;
+}
+.page-quienes .intro__text { line-height: 1.65; font-size: 1.1rem; }
+.page-quienes .intro__cta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $sp-3;
+}
+.page-quienes .intro__cta .btn-primary {
+  @include mx.btn-base;
+  background: $brand;
+  color: #fff;
+}
+.page-quienes .intro__cta .btn-primary:hover {
+  background: darken($brand, 6%);
+  transform: translateY(-1px);
+}
+.page-quienes .intro__cta .btn-outline {
+  @include mx.btn-base;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+.page-quienes .intro__cta .btn-outline:hover { background: #fff; color: $brand; }
+
+.page-quienes .mission-card {
+  position: relative;
+  background: $surface;
+  border-radius: $radius;
+  padding: $sp-6;
+  border: 2px solid rgba(#2563eb, .7);
+  box-shadow: 0 0 0 0 rgba(#2563eb, .35);
+  transform-origin: center;
+  animation: missionPulse 2.2s ease-in-out infinite;
+}
+@keyframes missionPulse {
+  0%   { transform: scale(.99); box-shadow: 0 0 0 0 rgba(#2563eb,.35); }
+  50%  { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(#2563eb,.12); }
+  100% { transform: scale(.99); box-shadow: 0 0 0 0 rgba(#2563eb,.35); }
+}
+@media (prefers-reduced-motion: reduce) { .page-quienes .mission-card { animation: none; } }
+
+.page-quienes .info-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-4;
+  justify-content: center;
+  padding-block: $sp-6;
+}
+.page-quienes .info-card {
+  flex: 1 1 calc(50% - #{$sp-4});
+  max-width: 500px;
+  background: #863902;
+  color: #fff;
+  border-radius: $radius;
+  padding: $sp-5 $sp-6;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  transform-origin: center;
+  animation: infoPulse 3s ease-in-out infinite;
+  display: grid;
+  gap: $sp-3;
+}
+.page-quienes .info-card h3 { margin: 0; font-weight: 800; }
+.page-quienes .info-card p { margin: 0; line-height: 1.6; }
+
+@keyframes infoPulse { 0% { transform: scale(1);} 50% { transform: scale(1.03);} 100% { transform: scale(1);} }
+@media (prefers-reduced-motion: reduce) { .page-quienes .info-card { animation: none; } }
+@media (max-width: $bp-sm) {
+  .page-quienes .info-card { flex: 1 1 100%; }
+  .page-quienes .intro__cta { flex-direction: column; }
+}

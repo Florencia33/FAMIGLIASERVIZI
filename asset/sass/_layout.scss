@@ -1,0 +1,30 @@
+@use "variables" as *;
+@use "mixins" as mx;
+
+.page {
+  padding-top: 80px;           
+}
+
+.section {
+  padding-block: $sp-8;
+  &__inner { @include mx.container(); }
+}
+
+
+.grid {
+  @include mx.auto-grid(260px, $sp-4);
+}
+
+.card {
+  @include mx.card;
+  padding: $sp-6;
+}
+
+
+.btn { @include mx.btn-base; }
+.btn--brand { background: $brand; color: #fff;
+  &:hover { background: $brand-700; transform: translateY(-1px); }
+}
+.btn--outline { background: transparent; border-color: $brand; color: $brand;
+  &:hover { background: $brand; color:#fff; }
+}
